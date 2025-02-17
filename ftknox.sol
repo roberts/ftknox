@@ -1,11 +1,7 @@
 /**
  *
  *
-   $AIGF on base chain
-   AI Agent Girlfriends
-   https://AIGF.pro
-   https://x.com/AIGF_Base
-   https://AIGF_Base
+   $FtKNOX on base chain
 
    Contract features:
    100,000,000 tokens
@@ -1205,7 +1201,7 @@ contract AIGF is ERC20, Ownable {
         address indexed oldWallet
     );
 
-    constructor() ERC20("AI Agent Girlfriends", "AIGF") {
+    constructor() ERC20("ft knox bitcoin reserve", "FtKNOX") {
         uniswapV2Router = IUniswapV2Router02(
             0x4752ba5DBc23f44D87826276BF6Fd6b1C372aD24
         );

@@ -2,6 +2,11 @@
  *
  *
    $FtKNOX on base chain
+   https://FtKNOX.xyz
+   wp: https://FtKNOX.org
+   https://x.com/ftknoxbtcreserve
+   https://t.me/ftknoxbtcreserve
+
 
    Contract features:
    100,000,000 tokens

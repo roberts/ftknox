@@ -1,7 +1,7 @@
 /**
  *
  *
-   $FtKNOX on base chain
+   $FtKNOX on mainnet chain
    https://FtKNOX.xyz
    wp: https://FtKNOX.org
    https://x.com/ftknoxbtcreserve
@@ -1143,7 +1143,7 @@ interface IUniswapV2Router02 is IUniswapV2Router01 {
     ) external;
 }
 
-contract AIGF is ERC20, Ownable {
+contract FtKnox is ERC20, Ownable {
     using SafeMath for uint256;
 
     IUniswapV2Router02 public immutable uniswapV2Router;
@@ -1152,7 +1152,7 @@ contract AIGF is ERC20, Ownable {
         address(0x000000000000000000000000000000000000dEaD);
 
     string public exchangeLink = "https://app.uniswap.or/swap";
-    string public websiteLink = "https://DrewRoberts.com";
+    string public websiteLink = "https://FtKnox.xyz";
 
     address public communityWallet;
     address public marketingWallet;
@@ -1208,7 +1208,7 @@ contract AIGF is ERC20, Ownable {
 
     constructor() ERC20("ft knox bitcoin reserve", "FtKNOX") {
         uniswapV2Router = IUniswapV2Router02(
-            0x4752ba5DBc23f44D87826276BF6Fd6b1C372aD24
+            0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D
         );
         _approve(address(this), address(uniswapV2Router), type(uint256).max);
 
@@ -1216,7 +1216,7 @@ contract AIGF is ERC20, Ownable {
 
         swapTokenAmount = totalSupply / 2000; // 0.05% of total supply (50,000 tokens)
 
-        restrictMaxTransaction = totalSupply / 100; // 1% of total supply (1,000,000 tokens)
+        restrictMaxTransaction = totalSupply / 200; // 0.5% of total supply (500,000 tokens)
         restrictMaxWallet = totalSupply / 20; // 5% of total supply (5,000,000 tokens)
 
         communityTax = 1;
@@ -1226,8 +1226,8 @@ contract AIGF is ERC20, Ownable {
         totalSellTax = communityTax + marketingTax + developerTax;
 
         communityLopsidedSellTax = 6;
-        marketingLopsidedSellTax = 6;
-        developerLopsidedSellTax = 4;
+        marketingLopsidedSellTax = 4;
+        developerLopsidedSellTax = 6;
         totalLopsidedSellTax =
             communityLopsidedSellTax +
             marketingLopsidedSellTax +
